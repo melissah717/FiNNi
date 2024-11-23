@@ -38,8 +38,8 @@ class Trainer:
         """
         Build the model architecture.
         """
-        print("Building model...")
-        model = Sequential([
+        print("Building FiNNi...")
+        finni = Sequential([
             Input(shape=(input_shape,)),
             Dense(128, activation='relu'),
             Dropout(0.2),
@@ -48,12 +48,16 @@ class Trainer:
             Dense(32, activation='relu'),
             Dense(1, activation='linear')
         ])
-        model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
-        return model
+        finni.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
+        return finni
 
     def run(self, train=True, evaluate=True):
         """
         Main workflow: process data, train model, and evaluate results.
+        flags:
+        training = true -> scales data and fits
+        evaluate = true -> returns metrics and result dataframe
+        can be combined
         """
         X, y = self.process_data()
         if X is None or y is None:
@@ -72,7 +76,7 @@ class Trainer:
         )
 
         if train:
-            print("Training model...")
+            print("Training FiNNi...")
             self.model.fit(
                 X_train, y_train,
                 validation_data=(self.X_val, self.y_val),
