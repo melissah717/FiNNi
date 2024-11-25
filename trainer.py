@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from pipeline import DataPipeline
 import numpy as np
 import matplotlib.pyplot as plt
-
+import asyncio
 
 class Trainer:
     def __init__(self, date, hyperparameters, trend_target_time):
@@ -139,4 +139,29 @@ class Trainer:
         """
         self.scaler_X = joblib.load(os.path.join(scaler_path, 'scaler_X.pkl'))
         self.scaler_y = joblib.load(os.path.join(scaler_path, 'scaler_y.pkl'))
-    
+
+import time
+
+async def real_time_prediction(trainer, channel, trend_target_time, data_pipeline):
+    """
+    Predict in real-time, every 60 seconds, with Discord notifications.
+    """
+    print("Starting real-time prediction...")
+    while True:
+        try:
+            new_row = data_pipeline.get_next_row() 
+            timestamp = new_row['timestamp']
+            features = data_pipeline.get_features_for_minute(timestamp)
+
+
+            prediction = trainer.predict_real_time(features)
+
+            message = f"Prediction at {timestamp} for target time {trend_target_time}: {prediction[0]:.2f}"
+
+            await channel.send(message)
+
+            await asyncio.sleep(60)
+        
+        except Exception as e:
+            print(f"Error during real-time prediction: {e}")
+            await asyncio.sleep(60)  

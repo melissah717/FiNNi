@@ -60,7 +60,7 @@ class DataPipeline:
         y_value = closest_target_row['underlying_price'].values[0]
 
         features = df[['pcr_zscore', 'volume_zscore', 'volume_ma_short', 'volume_ma_long']].values
-        targets = [y_value] * len(features)  # Use the same target value for all time points leading up to the target time
+        targets = [y_value] * len(features) 
 
         X = pd.DataFrame(features, columns=['pcr_zscore', 'volume_zscore', 'volume_ma_short', 'volume_ma_long'])
         y = pd.Series(targets)
@@ -76,7 +76,27 @@ class DataPipeline:
         """
         Get features up to the given minute for real-time prediction.
         """
-        filtered_df = self.filtered_df[self.filtered_df['timestamp'] <= timestamp]
-        if filtered_df.empty:
+        filtered_df = self.filtered_df[self.filtered_df['timestamp'] < timestamp]
+        if filtered_df.empty:  
             raise ValueError(f"No available data before {timestamp}")
+
         return filtered_df[['pcr_zscore', 'volume_zscore', 'volume_ma_short', 'volume_ma_long']].values[-1].reshape(1, -1)
+
+    
+    def get_next_row(self):
+        """
+        Get the next row of data to simulate real-time data retrieval.
+        """
+        if self.filtered_df is None or self.filtered_df.empty:
+            raise ValueError("No data loaded or data is empty.")
+
+        if not hasattr(self, 'current_index'):
+            self.current_index = 0 
+
+        if self.current_index >= len(self.filtered_df):
+            raise ValueError("No more data available for the given date.")
+
+        # Get the next row
+        next_row = self.filtered_df.iloc[self.current_index]
+        self.current_index += 1
+        return next_row
