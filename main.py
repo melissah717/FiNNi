@@ -1,22 +1,51 @@
 from trainer import Trainer
-from hyperparameter_tuner import tune_hyperparameters
+# from hyperparameter_tuner import tune_hyperparameters
+from pipeline import DataPipeline
+import logging
     
 def main():
-    date = "2024-11-20"
+    logging.basicConfig(level=logging.INFO)
+    
+    #these are the dates for training!
+    dates = ["2024-11-13", "2024-11-14", "2024-11-15", "2024-11-19", "2024-11-20", "2024-11-21"]
+    test_date = "2024-11-22"
     
     # uncomment this block to run hyperparameter tuning
-    best_params, best_performance = tune_hyperparameters(date)
-    print("\nFinal Results:")
-    print(f"Best Hyperparameters: {best_params}")
-    print(f"Best Validation Loss: {best_performance:.4f}")
-    
-    ## OR 
-    
-    # Run a single date with default hyperparameters
-    trainer = Trainer(date, best_params)
-    val_df = trainer.run(train=True, evaluate=True)
-    if val_df is not None:
-        print(val_df.head())
+    # best_params, best_performance = tune_hyperparameters(date)
+    # print("\nFinal Results:")
+    # print(f"Best Hyperparameters: {best_params}")
+    # print(f"Best Validation Loss: {best_performance:.4f}")
 
+    BEST_PARAMS = {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [64, 32],
+        "dropout_rate": 0.05,
+        "num_layers": 2,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.000001
+    }
+    trend_target_time = "20:00:00"
+    model_path = "model.keras"
+
+    for date in dates:
+        trainer = Trainer(date, BEST_PARAMS, trend_target_time)
+        trainer.train(model_path)
+        
+    trainer = Trainer(test_date, BEST_PARAMS, trend_target_time)
+    trainer.load_model(model_path)
+
+    data_pipeline = DataPipeline(test_date, rolling_window=BEST_PARAMS['rolling_window'], trend_target_time=trend_target_time)
+    data_pipeline.load_data().process_features()
+
+    filtered_df = data_pipeline.filtered_df
+    for _, row in filtered_df.iterrows():
+        timestamp = row['timestamp']
+        features = data_pipeline.get_features_for_minute(timestamp)
+        prediction = trainer.predict_real_time(features)
+        print(f"Prediction at {timestamp} for target time {trend_target_time}: {prediction[0]:.2f}")
+
+            
 if __name__ == "__main__":
     main()

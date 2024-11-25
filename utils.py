@@ -2,16 +2,20 @@ import matplotlib.pyplot as plt
 import itertools
 import json
 import pandas as pd
+import os
+from dotenv import load_dotenv
 from pymongo import MongoClient
-from config import MONGO_URI, DATABASE_NAME, COLLECTION_NAME
+from datetime import datetime
+
+load_dotenv()
 
 def load(date):
     """
     Connect to DB and fetch snapshots
     """
-    client = MongoClient(MONGO_URI)
-    db = client[DATABASE_NAME]
-    collection = db[COLLECTION_NAME]
+    client = MongoClient(os.getenv("MONGO_URI"))
+    db = client[os.getenv("DATABASE_NAME")]
+    collection = db[os.getenv("COLLECTION_NAME")]
     snapshots = list(collection.find())
     df = pd.DataFrame(snapshots)
     df['timestamp'] = pd.to_datetime(df['timestamp'])
@@ -19,7 +23,6 @@ def load(date):
     
     
     return df[df['timestamp'].dt.date == pd.to_datetime(date).date()]
-
 
 #TODO make this dynamic
 def generate_hyperparameters(grid):
@@ -37,15 +40,14 @@ def generate_hyperparameters(grid):
         
         
 param_grid = {
-    "skew_threshold": [1, 1.5],
-    "rolling_window": [ 60, 120],
-    "trend_window": [ 30, 60],
+    "skew_threshold": [1, 1.5, 1.75],
+    "rolling_window": [60, 120],
     "neurons_per_layer": [[128, 64, 32]],
-    "dropout_rate": [0.2],
+    "dropout_rate": [0.05, 0.1, 0.15, 0.2],
     "num_layers": [3],
     "batch_size": [16],
-    "epochs": [50, 100],
-    "learning_rate": [0.001]
+    "epochs": [50, 100, 300, 500],
+    "learning_rate": [0.001, 0.0001, 0.00001]
 }     
 generate_hyperparameters(param_grid)
 
@@ -58,29 +60,29 @@ def load_hyperparameters(file_path="hyperparameters.json"):
         return None
     
     
-def plot_vs(val_df):
-    plt.figure(figsize=(10, 6))
-    plt.scatter(val_df['Actual'], val_df['Predicted'], alpha=0.7)
-    plt.plot([val_df['Actual'].min(), val_df['Actual'].max()], 
-             [val_df['Actual'].min(), val_df['Actual'].max()], 
-             color='red', linestyle='--', label="Perfect Prediction")
-    plt.xlabel('Actual Price')
-    plt.ylabel('Predicted Price')
-    plt.title('Actual vs Predicted Prices')
-    plt.legend()
-    plt.grid(alpha=0.6)
-    plt.show()
+# def plot_actual_vs_predicted(val_df):
+#     plt.figure(figsize=(10, 6))
+#     plt.scatter(val_df['Actual'], val_df['Predicted'], alpha=0.7)
+#     plt.plot([val_df['Actual'].min(), val_df['Actual'].max()], 
+#              [val_df['Actual'].min(), val_df['Actual'].max()], 
+#              color='red', linestyle='--', label="Perfect Prediction")
+#     plt.xlabel('Actual Price')
+#     plt.ylabel('Predicted Price')
+#     plt.title('Actual vs Predicted Prices')
+#     plt.legend()
+#     plt.grid(alpha=0.6)
+#     plt.show()
     
-def plot_training_validation_loss(history):
-    """
-    Plot training and validation loss over epochs.
-    """
-    plt.figure(figsize=(10, 6))
-    plt.plot(history.history['loss'], label='Training Loss')
-    plt.plot(history.history['val_loss'], label='Validation Loss')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-    plt.title('Training and Validation Loss')
-    plt.legend()
-    plt.grid(True, linestyle='--', alpha=0.6)
-    plt.show()
+# def plot_training_validation_loss(history):
+#     """
+#     Plot training and validation loss over epochs.
+#     """
+#     plt.figure(figsize=(10, 6))
+#     plt.plot(model.history['loss'], label='Training Loss')
+#     plt.plot(history.history['val_loss'], label='Validation Loss')
+#     plt.xlabel('Epoch')
+#     plt.ylabel('Loss')
+#     plt.title('Training and Validation Loss')
+#     plt.legend()
+#     plt.grid(True, linestyle='--', alpha=0.6)
+#     plt.show()

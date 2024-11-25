@@ -2,7 +2,510 @@
     {
         "skew_threshold": 1,
         "rolling_window": 60,
-        "trend_window": 30,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -17,7 +520,34 @@
     {
         "skew_threshold": 1,
         "rolling_window": 60,
-        "trend_window": 30,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -32,7 +562,622 @@
     {
         "skew_threshold": 1,
         "rolling_window": 60,
-        "trend_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
         "neurons_per_layer": [
             128,
             64,
@@ -46,8 +1191,35 @@
     },
     {
         "skew_threshold": 1,
-        "rolling_window": 60,
-        "trend_window": 60,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
         "neurons_per_layer": [
             128,
             64,
@@ -62,7 +1234,6 @@
     {
         "skew_threshold": 1,
         "rolling_window": 120,
-        "trend_window": 30,
         "neurons_per_layer": [
             128,
             64,
@@ -71,13 +1242,40 @@
         "dropout_rate": 0.2,
         "num_layers": 3,
         "batch_size": 16,
-        "epochs": 50,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
         "learning_rate": 0.001
     },
     {
         "skew_threshold": 1,
         "rolling_window": 120,
-        "trend_window": 30,
         "neurons_per_layer": [
             128,
             64,
@@ -86,13 +1284,40 @@
         "dropout_rate": 0.2,
         "num_layers": 3,
         "batch_size": 16,
-        "epochs": 100,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
         "learning_rate": 0.001
     },
     {
         "skew_threshold": 1,
         "rolling_window": 120,
-        "trend_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -101,13 +1326,12 @@
         "dropout_rate": 0.2,
         "num_layers": 3,
         "batch_size": 16,
-        "epochs": 50,
-        "learning_rate": 0.001
+        "epochs": 500,
+        "learning_rate": 0.0001
     },
     {
         "skew_threshold": 1,
         "rolling_window": 120,
-        "trend_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -116,13 +1340,516 @@
         "dropout_rate": 0.2,
         "num_layers": 3,
         "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
         "epochs": 100,
         "learning_rate": 0.001
     },
     {
         "skew_threshold": 1.5,
         "rolling_window": 60,
-        "trend_window": 30,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -137,7 +1864,34 @@
     {
         "skew_threshold": 1.5,
         "rolling_window": 60,
-        "trend_window": 30,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -152,7 +1906,6 @@
     {
         "skew_threshold": 1.5,
         "rolling_window": 60,
-        "trend_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -161,13 +1914,40 @@
         "dropout_rate": 0.2,
         "num_layers": 3,
         "batch_size": 16,
-        "epochs": 50,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
         "learning_rate": 0.001
     },
     {
         "skew_threshold": 1.5,
         "rolling_window": 60,
-        "trend_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -176,13 +1956,572 @@
         "dropout_rate": 0.2,
         "num_layers": 3,
         "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
         "epochs": 100,
         "learning_rate": 0.001
     },
     {
         "skew_threshold": 1.5,
         "rolling_window": 120,
-        "trend_window": 30,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
         "neurons_per_layer": [
             128,
             64,
@@ -197,7 +2536,34 @@
     {
         "skew_threshold": 1.5,
         "rolling_window": 120,
-        "trend_window": 30,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
         "neurons_per_layer": [
             128,
             64,
@@ -212,7 +2578,622 @@
     {
         "skew_threshold": 1.5,
         "rolling_window": 120,
-        "trend_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.5,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -225,9 +3206,36 @@
         "learning_rate": 0.001
     },
     {
-        "skew_threshold": 1.5,
-        "rolling_window": 120,
-        "trend_window": 60,
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
         "neurons_per_layer": [
             128,
             64,
@@ -238,5 +3246,789 @@
         "batch_size": 16,
         "epochs": 100,
         "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 60,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.05,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.1,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.15,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 50,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 100,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 300,
+        "learning_rate": 1e-05
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 0.0001
+    },
+    {
+        "skew_threshold": 1.75,
+        "rolling_window": 120,
+        "neurons_per_layer": [
+            128,
+            64,
+            32
+        ],
+        "dropout_rate": 0.2,
+        "num_layers": 3,
+        "batch_size": 16,
+        "epochs": 500,
+        "learning_rate": 1e-05
     }
 ]
