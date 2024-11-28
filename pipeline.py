@@ -1,50 +1,34 @@
 from utils import load
 import pandas as pd
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 import pytz
-import logging
-import time
+
 
 class DataPipeline:
-    def __init__(self, date, rolling_window, trend_target_time, prediction_mode=False):
+    """
+    Loading, filtering, and feature engineering. Mode naive
+
+    """
+
+    def __init__(self, date, rolling_window, trend_target_time):
         self.date = date
         self.rolling_window = rolling_window
         self.trend_target_time = trend_target_time
         self.filtered_df = None
-        self.prediction_mode = prediction_mode
-        self.last_used_index = -1
         
     def load_data(self):
-        print(f"Loading {self.date}")
+        print(f"LOAD_DATA({self.date})")
         self.filtered_df = load(self.date)
-        # if self.filtered_df.empty or len(self.filtered_df) < self.rolling_window:
-        #     raise ValueError("No data available")
-        print(self.filtered_df)
-
-        # Filter data for the current day only to avoid using data from previous days
         self.filtered_df['timestamp'] = pd.to_datetime(self.filtered_df['timestamp']).dt.round('min')
         self.filtered_df = self.filtered_df[self.filtered_df['timestamp'].dt.date == pd.to_datetime(self.date).date()]
-
-        target_time = pd.to_datetime(f"{self.date} {self.trend_target_time}")
-        self.filtered_df = self.filtered_df[self.filtered_df['timestamp'] <= target_time]
-
         return self
 
     def process_features(self):
-        print("Processing features...")
-        df = self.filtered_df
+        df = self.filtered_df.copy()
+        print(df.columns)
+        target_time = pd.to_datetime(f"{self.date} {self.trend_target_time}")
+        df = df[df['timestamp'] <= target_time]
 
-        # Proceed with available data in prediction mode even if rolling window is not complete
-        if len(df) < self.rolling_window:
-            if self.prediction_mode:
-                missing_points = self.rolling_window - len(df)
-                logging.warning(f"Not enough data for a full rolling window. Missing {missing_points} data points. Proceeding with available data in prediction mode.")
-            else:
-                missing_points = self.rolling_window - len(df)
-                print(f"Waiting for more data... {missing_points} data points left until first rolling window calculation can be performed.")
-                return self
-
-        # Processing features
         df['total_volume'] = df['options_data'].apply(lambda x: sum(opt['Volume'] for opt in x))
         df['pcr_mean'] = df['put_call_ratio'].rolling(self.rolling_window, min_periods=1).mean()
         df['pcr_std'] = df['put_call_ratio'].rolling(self.rolling_window, min_periods=1).std()
@@ -54,10 +38,10 @@ class DataPipeline:
         df['volume_zscore'] = (df['total_volume'] - df['volume_mean']) / df['volume_std']
         df['volume_ma_short'] = df['total_volume'].rolling(window=5, min_periods=1).mean()
         df['volume_ma_long'] = df['total_volume'].rolling(window=60, min_periods=1).mean()
+        # Drop rows with NaN values only if essential
+        df = df.dropna(subset=['pcr_zscore', 'volume_zscore', 'volume_ma_short', 'volume_ma_long'])
 
-        df = df.dropna()
         self.filtered_df = df
-        print(f"Filtered DataFrame length after processing features: {len(self.filtered_df)}")
         return self
 
     

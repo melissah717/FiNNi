@@ -5,23 +5,26 @@ import joblib
 from tensorflow.keras.models import Sequential# type: ignore
 from tensorflow.keras.layers import Dense, Dropout, Input# type: ignore
 from tensorflow.keras.optimizers import Adam# type: ignore
+from tensorflow.keras.regularizers import l2#type: ignore
 from sklearn.preprocessing import StandardScaler
 from pipeline import DataPipeline
 import numpy as np
 import asyncio
 import csv
+import logging
+
+
+"""
+Logic agnostic for two modes of training
+
+"""
 
 class Trainer:
-    def __init__(self, date, hyperparameters, trend_target_time):
-        self.date = date
+    def __init__(self, hyperparameters):
         self.hyperparameters = hyperparameters
-        self.trend_target_time = trend_target_time
-        self.data_pipeline = None
         self.model = None
         self.scaler_X = None
         self.scaler_y = None
-        self.X_val = None
-        self.y_val = None
 
     def process_data(self):
         """
@@ -41,7 +44,7 @@ class Trainer:
 
     def build_model(self, input_shape):
         """
-        Build the model architecture using hyperparameters.
+        FiNNi's architecture
         """
         print("Building model...")
         model = Sequential()
@@ -50,7 +53,7 @@ class Trainer:
 
         for i in range(self.hyperparameters['num_layers']):
             neurons = self.hyperparameters['neurons_per_layer'][i]
-            model.add(Dense(neurons, activation='relu'))
+            model.add(Dense(neurons, activation='relu', kernel_regularizer=l2(0.001)))
             model.add(Dropout(self.hyperparameters['dropout_rate']))
 
         model.add(Dense(1, activation='linear'))
@@ -58,56 +61,61 @@ class Trainer:
         model.compile(optimizer=Adam(learning_rate=self.hyperparameters['learning_rate']),
                     loss='mean_squared_error', 
                     metrics=['mae'])
-        
+        self.model = model
         return model
 
-    def train(self, model_path='model.keras', scaler_path='scalers'):
-        """
-        Train the model on historical data.
-        """
-        X, y = self.process_data()
-        if X is None or y is None:
-            print(f"Skipping {self.date} due to insufficient data.")
-            return None
-        morning_data_points = min(60, len(X))
-        indices = np.arange(morning_data_points)
-        np.random.shuffle(indices)
-        train_indices = indices[:int(0.8 * len(indices))]
-        val_indices = indices[int(0.8 * len(indices)):]
-
-        X_train, y_train = X[train_indices], y[train_indices]
-        X_val, y_val = X[val_indices], y[val_indices]
-
-        if len(X_train) < 10 or len(X_val) < 10:
-            print(f"Skipping {self.date} due to insufficient training or validation data.")
-            return None
-
-        if os.path.exists(model_path):
-            self.load_model(model_path)
-        else:
-            self.model = self.build_model(X.shape[1])
+    def train(self, X_train, y_train, model_path='model.keras', scaler_path="scalers"):
+        if self.model is None:
+            if os.path.exists(model_path):
+                print(f"Loading existing model.")
+                self.load_model(model_path)
+            else:
+                print("Building a new model.")
+                self.build_model(X_train.shape[1])
 
         self.scaler_X = StandardScaler()
         self.scaler_y = StandardScaler()
-
         X_train_scaled = self.scaler_X.fit_transform(X_train)
         y_train_scaled = self.scaler_y.fit_transform(y_train)
-
-        print("Training model...")
         self.model.fit(
             X_train_scaled, y_train_scaled,
             epochs=self.hyperparameters['epochs'],
             batch_size=self.hyperparameters['batch_size'],
             verbose=1
         )
-        self.save_model(model_path)
 
+        #save scalers for live mode
+        self.save_model(model_path)
         os.makedirs(scaler_path, exist_ok=True)
         joblib.dump(self.scaler_X, os.path.join(scaler_path, 'scaler_X.pkl'))
         joblib.dump(self.scaler_y, os.path.join(scaler_path, 'scaler_y.pkl'))
-
-        return self.model
         
+    def predict(self, X):
+        """
+        Predict on scaled data.
+        """
+        if self.scaler_X is None or self.scaler_y is None:
+            raise ValueError("Scalers are not loaded. Load scalers before prediction.")
+
+        X_scaled = self.scaler_X.transform(X)
+        prediction_scaled = self.model.predict(X_scaled)
+        prediction_original = self.scaler_y.inverse_transform(prediction_scaled)
+        return prediction_original.flatten()
+
+
+    def save_model(self, file_path='model.keras'):
+        self.model.save(file_path)
+    
+    def load_model(self, file_path='model.keras'):
+        if os.path.exists(file_path):
+            self.model = tf.keras.models.load_model(file_path)
+
+    def load_scalers(self, scaler_path='scalers'):
+        """
+        Load the scalers used during training.
+        """
+        self.scaler_X = joblib.load(os.path.join(scaler_path, 'scaler_X.pkl'))
+        self.scaler_y = joblib.load(os.path.join(scaler_path, 'scaler_y.pkl'))
 
     def predict_real_time(self, X, scaler_path='scalers'):
         """
@@ -121,28 +129,28 @@ class Trainer:
         prediction_original_scale = self.scaler_y.inverse_transform(prediction_scaled)
         return prediction_original_scale.flatten()
 
-    
-    def save_model(self, file_path='model.keras'):
-        self.model.save(file_path)
-    
-    def load_model(self, file_path='model.keras'):
-        if os.path.exists(file_path):
-            self.model = tf.keras.models.load_model(file_path)
-            
-    def load_scalers(self, scaler_path='scalers'):
+    def predict_for_target_time(self, trend_target_time):
         """
-        Load the scalers used during training.
+        Predict for the specified target time using only data up to that point.
         """
-        self.scaler_X = joblib.load(os.path.join(scaler_path, 'scaler_X.pkl'))
-        self.scaler_y = joblib.load(os.path.join(scaler_path, 'scaler_y.pkl'))
+        target_time = pd.to_datetime(f"{self.date} {trend_target_time}")
+        features = self.get_features_for_minute(target_time)
 
+        if features is None:
+            raise ValueError("Not enough data to calculate features for the target time.")
 
+        prediction = self.trainer.predict(features)
+        print(f"Prediction for {trend_target_time}: {prediction}")
+        return prediction
+    
 async def real_time_prediction(trainer, channel, trend_target_time, data_pipeline, output_dir="predictions"):
     """
     Predict in real-time, every 60 seconds, with Discord notifications, and save predictions to a CSV at the end of the day.
     """
     print("Starting real-time prediction...")
-    predictions = []
+    print("Loading model and scalers for real-time predictions...")
+    trainer.load_model(model_path)
+    trainer.load_scalers(scaler_path)
 
     while True:
         try:

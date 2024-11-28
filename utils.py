@@ -118,8 +118,8 @@ def display_welcome():
 ⠀⠀⠀⠀⠀⠀⠙⠒⠦⣄⣀⡀⠀⠀⠀⠀⢠⣿⡛⠒⠲⠦⠤⠤⠤⠤⠤⠶⠒⠒⠒⠊⠉⠁⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """
-    print(Fore.GREEN + Style.BRIGHT + banner + Style.RESET_ALL)
-    print(Fore.CYAN + "hi, I'm FiNNi the forward feed neural network thats going to make Mel rich 🌊" + Style.RESET_ALL)
+    print(Fore.MAGENTA + Style.BRIGHT + banner + Style.RESET_ALL)
+    print(Fore.RED + "hi, I'm FiNNi the forward feed neural network thats going to make Mel rich 🌊" + Style.RESET_ALL)
     
 # def plot_actual_vs_predicted(val_df):
 #     plt.figure(figsize=(10, 6))
