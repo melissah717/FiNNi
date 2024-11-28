@@ -45,17 +45,48 @@ def generate_hyperparameters(grid):
         
         
 param_grid = {
-    "skew_threshold": [1, 1.5, 1.75],
-    "rolling_window": [60, 120],
-    "neurons_per_layer": [[128, 64, 32]],
-    "dropout_rate": [0.05, 0.1, 0.15, 0.2],
-    "num_layers": [3],
-    "batch_size": [16],
-    "epochs": [50, 100, 300, 500],
-    "learning_rate": [0.001, 0.0001, 0.00001]
+    "skew_threshold": [1, 1.25, 1.4, 1.5, 1.75],
+    "rolling_window": [20, 30],
+    "neurons_per_layer": [[32, 16], [16, 8], [64, 32]],
+    "dropout_rate": [0.05, 0.1],
+    "num_layers": [2],
+    "batch_size": [8, 16],
+    "epochs": [100, 150, 200],
+    "learning_rate": [0.0001, 0.00001, 0.000001]
 }     
 generate_hyperparameters(param_grid)
 
+def plot_hyperparameter_performance(results):
+    """
+    Plot the performance of each hyperparameter combination using MAE and MSE.
+    """
+    mae_values = [result[1] for result in results]
+    mse_values = [result[2] for result in results]
+    combinations = range(1, len(results) + 1)
+
+    plt.figure(figsize=(14, 6))
+
+    # Plot MAE
+    plt.subplot(1, 2, 1)
+    plt.plot(combinations, mae_values, marker='o', color='b', label='MAE')
+    plt.xlabel('Hyperparameter Combination')
+    plt.ylabel('MAE')
+    plt.title('Mean Absolute Error (MAE) for Each Hyperparameter Combination')
+    plt.legend()
+    plt.grid(True)
+
+    # Plot MSE
+    plt.subplot(1, 2, 2)
+    plt.plot(combinations, mse_values, marker='o', color='r', label='MSE')
+    plt.xlabel('Hyperparameter Combination')
+    plt.ylabel('MSE')
+    plt.title('Mean Squared Error (MSE) for Each Hyperparameter Combination')
+    plt.legend()
+    plt.grid(True)
+
+    plt.tight_layout()
+    plt.show()
+    
 def load_hyperparameters(file_path="hyperparameters.json"):
     try:
         with open(file_path, "r") as file:
@@ -65,7 +96,7 @@ def load_hyperparameters(file_path="hyperparameters.json"):
         return None
 
 def display_welcome():
-    banner= """```
+    banner= """
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡤⠤⢶⢒⣚⣛⡛⠓⠲⢤⡀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⣛⣲⠶⠤⣤⡤⠖⠋⠉⣀⡤⠖⠋⠉⠉⠉⠉⠙⠶⡀⠙⣆⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⢽⡆⠀⠀⣠⡴⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣆⠸⡆⠀⠀⠀⠀⠀
@@ -86,9 +117,9 @@ def display_welcome():
 ⠀⠀⠀⠉⠳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠈⠧⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣶⣋⣀⣀⡤
 ⠀⠀⠀⠀⠀⠀⠙⠒⠦⣄⣀⡀⠀⠀⠀⠀⢠⣿⡛⠒⠲⠦⠤⠤⠤⠤⠤⠶⠒⠒⠒⠊⠉⠁⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-```"""
+"""
     print(Fore.GREEN + Style.BRIGHT + banner + Style.RESET_ALL)
-    print(Fore.CYAN + "hi, I'm FiNNi 🌊" + Style.RESET_ALL)
+    print(Fore.CYAN + "hi, I'm FiNNi the forward feed neural network thats going to make Mel rich 🌊" + Style.RESET_ALL)
     
 # def plot_actual_vs_predicted(val_df):
 #     plt.figure(figsize=(10, 6))

@@ -6,11 +6,10 @@ from tensorflow.keras.models import Sequential# type: ignore
 from tensorflow.keras.layers import Dense, Dropout, Input# type: ignore
 from tensorflow.keras.optimizers import Adam# type: ignore
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
 from pipeline import DataPipeline
 import numpy as np
-import matplotlib.pyplot as plt
 import asyncio
+import csv
 
 class Trainer:
     def __init__(self, date, hyperparameters, trend_target_time):
@@ -94,9 +93,6 @@ class Trainer:
         X_train_scaled = self.scaler_X.fit_transform(X_train)
         y_train_scaled = self.scaler_y.fit_transform(y_train)
 
-        X_val_scaled = self.scaler_X.transform(X_val)
-        y_val_scaled = self.scaler_y.transform(y_val)
-
         print("Training model...")
         self.model.fit(
             X_train_scaled, y_train_scaled,
@@ -140,28 +136,52 @@ class Trainer:
         self.scaler_X = joblib.load(os.path.join(scaler_path, 'scaler_X.pkl'))
         self.scaler_y = joblib.load(os.path.join(scaler_path, 'scaler_y.pkl'))
 
-import time
 
-async def real_time_prediction(trainer, channel, trend_target_time, data_pipeline):
+async def real_time_prediction(trainer, channel, trend_target_time, data_pipeline, output_dir="predictions"):
     """
-    Predict in real-time, every 60 seconds, with Discord notifications.
+    Predict in real-time, every 60 seconds, with Discord notifications, and save predictions to a CSV at the end of the day.
     """
     print("Starting real-time prediction...")
+    predictions = []
+
     while True:
         try:
-            new_row = data_pipeline.get_next_row() 
+            new_row = data_pipeline.get_next_row()
             timestamp = new_row['timestamp']
             features = data_pipeline.get_features_for_minute(timestamp)
 
-
             prediction = trainer.predict_real_time(features)
 
-            message = f"Prediction at {timestamp} for target time {trend_target_time}: {prediction[0]:.2f}"
+            prediction_data = {
+                "timestamp": timestamp,
+                "prediction_for_20:00_UTC": float(prediction[0])
+            }
+            predictions.append(prediction_data)
 
+            message = f"FiNNi's prediction at {timestamp} for SPY at {trend_target_time} (UTC): {prediction[0]:.2f}"
             await channel.send(message)
 
             await asyncio.sleep(60)
-        
+
+        except ValueError as e:
+            print(f"No more data available or error: {e}")
+            break
         except Exception as e:
-            print(f"Error during real-time prediction: {e}")
-            await asyncio.sleep(60)  
+            print(f"Unexpected error during real-time prediction: {e}")
+            await asyncio.sleep(60)
+
+    output_path = os.path.join(output_dir, trend_target_time, str(data_pipeline.date))
+    os.makedirs(output_path, exist_ok=True)
+    output_file = os.path.join(output_path, "predictions.csv")
+
+    try:
+        with open(output_file, mode='w', newline='') as file:
+            fieldnames = ["timestamp", "prediction_for_20:00_UTC"]
+            writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+            writer.writeheader()
+            writer.writerows(predictions)
+
+        print(f"Predictions saved to {output_file}")
+    except Exception as e:
+        print(f"Error saving predictions to CSV: {e}")
